@@ -1,0 +1,20 @@
+# TRACEY CHAT 🏜️ — wastetrace.org kitchen desk hub (clone of ohana-chat).
+# Born 2026-09-27 JST: TRACEY = separate bell agent from TRACE, Shaka order.
+# Secrets: AGENT_KEY via `wrangler secret put` (never commit).
+
+name = "tracey-chat"
+main = "worker.js"
+compatibility_date = "2024-11-06"
+workers_dev = true
+
+[[durable_objects.bindings]]
+name = "HUB"
+class_name = "Hub"
+
+# CF law on this account: new DO namespaces must be SQLite-backed (err 10099).
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Hub"]
+
+[observability]
+enabled = true
