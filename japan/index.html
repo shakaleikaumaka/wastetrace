@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAPAN — Leave No Trace at Burning Japan · WASTE TRACE</title>
+<meta name="description" content="The honest waste guide for foreign burners at Burning Japan 2026 (Tsumagoi, Gunma): pack-it-out law, how Japanese garbage sorting really works, which bin for 30 burner items, Japanese phrases to show a shop or host, and the city office numbers to call.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏮</text></svg>">
+<style>
+  :root{
+    --sky-top:#12081f; --sky-mid:#3b1a4a; --dusk:#8a2f5c; --ember:#e85d2f; --flame:#ffa53d;
+    --dust:#e8d9b8; --dust-dim:#b9a67f; --ink:#1a1208; --paper:#f5ecd9;
+    --panel:rgba(18,8,31,.55);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--sky-top); color:var(--dust);
+    font-family:Georgia,'Times New Roman','Hiragino Mincho ProN','Yu Mincho',serif;
+    line-height:1.65; overflow-x:hidden;
+  }
+  h1,h2,h3,.hdr{font-family:Futura,'Trebuchet MS','Avenir Next',Avenir,Helvetica,Arial,sans-serif;letter-spacing:.06em}
+  a{color:var(--flame)}
+  a:hover{color:#ffd9a0}
+  .jp{font-family:'Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif;color:var(--dust-dim);font-size:.92em}
+  .proof .jp,.burns .jp{color:#7a5c3a}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;min-height:88vh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+  .hero svg.scene{position:absolute;inset:0;width:100%;height:100%;display:block}
+  .hero-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:5rem 2rem 6rem;text-align:center}
+  .kicker{font-family:Futura,'Trebuchet MS',sans-serif;text-transform:uppercase;letter-spacing:.42em;font-size:.8rem;color:var(--flame);margin-bottom:1.2rem}
+  .kicker a{text-decoration:none;color:var(--flame)}
+  h1.big{
+    font-size:clamp(2.2rem,7vw,4.8rem);text-transform:uppercase;line-height:1.06;
+    color:var(--paper);text-shadow:0 2px 30px rgba(232,93,47,.45);font-weight:700;
+  }
+  h1.big .burn{color:var(--flame)}
+  .hero-sub{max-width:680px;margin:1.6rem auto 0;font-size:1.12rem;color:var(--dust);font-style:italic}
+  .badges{margin-top:2rem;display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center}
+  .badge{
+    font-family:Futura,'Trebuchet MS',sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.14em;
+    border:1px solid rgba(232,217,184,.4);border-radius:999px;padding:.5rem 1.1rem;color:var(--dust);
+    background:rgba(18,8,31,.4);backdrop-filter:blur(2px);
+  }
+  .scrollcue{position:relative;z-index:2;text-align:center;padding-bottom:1.4rem;font-size:1.4rem;color:var(--dust-dim);animation:bob 2.6s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+
+  /* ---------- sections ---------- */
+  section{padding:5rem 2rem}
+  .wrap{max-width:980px;margin:0 auto}
+  .sec-kicker{font-family:Futura,'Trebuchet MS',sans-serif;text-transform:uppercase;letter-spacing:.34em;font-size:.75rem;color:var(--ember);margin-bottom:.9rem}
+  h2{font-size:clamp(1.6rem,4vw,2.4rem);text-transform:uppercase;color:var(--paper);margin-bottom:1.4rem;line-height:1.18}
+  p.body{font-size:1.05rem;max-width:780px;margin-bottom:1rem}
+
+  /* the 60-second answer */
+  .now{background:linear-gradient(180deg,var(--sky-top) 0%,#241031 100%);border-top:1px solid rgba(232,93,47,.25)}
+  .rules{counter-reset:rl;display:grid;gap:1rem;margin-top:2rem}
+  .rule{border:1px solid rgba(232,217,184,.3);border-radius:12px;padding:1.2rem 1.2rem 1.2rem 3.4rem;background:var(--panel);position:relative}
+  .rule::before{
+    counter-increment:rl;content:counter(rl);
+    position:absolute;top:1.1rem;left:1rem;width:28px;height:28px;border-radius:50%;
+    background:var(--ember);color:var(--paper);display:flex;align-items:center;justify-content:center;
+    font-family:Futura,'Trebuchet MS',sans-serif;font-weight:700;font-size:.9rem;
+  }
+  .rule h3{font-size:.92rem;text-transform:uppercase;letter-spacing:.12em;color:var(--flame);margin-bottom:.45rem}
+  .rule p{font-size:.95rem}
+  .bigquote{
+    font-size:clamp(1.25rem,3vw,1.9rem);font-style:italic;color:var(--paper);line-height:1.45;
+    border-left:4px solid var(--ember);padding-left:1.4rem;margin:2rem 0;
+  }
+
+  /* paper sections */
+  .proof{background:var(--paper);color:var(--ink)}
+  .proof h2{color:var(--ink)}
+  .proof .sec-kicker{color:#a0431f}
+  .proof p.body{color:var(--ink)}
+
+  /* bag grid */
+  .bags{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:1rem;margin:2rem 0}
+  .bag{border:2px solid var(--ink);border-radius:10px;padding:1rem;background:#fffdf6;box-shadow:4px 4px 0 rgba(26,18,8,.85)}
+  .bag .swatch{height:10px;border-radius:5px;margin-bottom:.7rem;border:1px solid rgba(26,18,8,.35)}
+  .bag h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.1em;color:#a0431f;margin-bottom:.35rem}
+  .bag .jpb{font-family:'Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif;font-size:.85rem;color:#7a5c3a;margin-bottom:.5rem}
+  .bag p{font-size:.85rem}
+
+  /* item table */
+  .tblwrap{overflow-x:auto;margin:1.6rem 0;border:2px solid var(--ink);border-radius:10px;background:#fffdf6;box-shadow:4px 4px 0 rgba(26,18,8,.85)}
+  table{border-collapse:collapse;width:100%;min-width:600px;font-size:.9rem}
+  th{font-family:Futura,'Trebuchet MS',sans-serif;text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;
+     background:var(--ink);color:var(--paper);padding:.6rem .8rem;text-align:left}
+  td{padding:.55rem .8rem;border-top:1px solid rgba(26,18,8,.18);vertical-align:top}
+  td .jp{display:block;font-size:.8rem}
+  .cat{font-family:Futura,'Trebuchet MS',sans-serif;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;
+       display:inline-block;border-radius:999px;padding:.18rem .6rem;white-space:nowrap}
+  .c-burn{background:#b33a2b;color:#f5ecd9}
+  .c-land{background:#2b4a73;color:#f5ecd9}
+  .c-raw{background:#6b5a33;color:#f5ecd9}
+  .c-pla{background:#295c36;color:#f5ecd9}
+  .c-res{background:#9a7a1f;color:#1a1208}
+  .c-no{background:#1a1208;color:#ffa53d}
+  .note{font-size:.9rem;font-style:italic;margin-top:1rem}
+
+  /* village / dark band */
+  .village{background:radial-gradient(ellipse at 50% 0%,#4a1f33 0%,var(--sky-top) 65%);border-top:1px solid rgba(232,93,47,.25)}
+  .decl{
+    margin:1.8rem auto;padding:1.5rem 1.8rem;border:2px solid var(--flame);border-radius:14px;
+    transform:rotate(-.6deg);background:rgba(18,8,31,.6);max-width:720px;
+  }
+  .decl .no{font-family:Futura,'Trebuchet MS',sans-serif;font-size:clamp(1.05rem,2.6vw,1.5rem);text-transform:uppercase;letter-spacing:.1em;color:var(--paper)}
+  .decl .yes{display:block;margin-top:.5rem;font-style:italic;color:var(--flame);font-size:1rem}
+
+  /* phrase card */
+  .phrases{background:linear-gradient(180deg,#241031 0%,var(--sky-top) 100%)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:2rem}
+  .pc{border:1px solid rgba(232,217,184,.3);border-radius:12px;padding:1.1rem;background:var(--panel)}
+  .pc .ja{font-family:'Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',sans-serif;font-size:1.25rem;color:var(--paper);line-height:1.5}
+  .pc .ro{font-size:.85rem;color:var(--dust-dim);font-style:italic;margin-top:.3rem}
+  .pc .en{font-size:.92rem;color:var(--dust);margin-top:.45rem}
+
+  /* vocab chips */
+  .vocab{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.6rem}
+  .vc{border:1px solid rgba(232,217,184,.35);border-radius:999px;padding:.4rem .9rem;font-size:.88rem;background:rgba(18,8,31,.4)}
+  .vc b{color:var(--flame);font-weight:normal}
+
+  /* honest / unverified */
+  .burns{background:var(--paper);color:var(--ink)}
+  .burns h2{color:var(--ink)}
+  .burns .sec-kicker{color:#a0431f}
+  .burns p.body{color:var(--ink)}
+  .unver{
+    margin-top:1.8rem;border:2px dashed #a0431f;border-radius:12px;padding:1.5rem;background:#fbf3df;
+  }
+  .unver h3{color:#a0431f;text-transform:uppercase;font-size:.95rem;letter-spacing:.18em;margin-bottom:.9rem}
+  .unver ul{margin-left:1.2rem;font-size:.93rem}
+  .unver li{margin-bottom:.5rem}
+  .phones{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;margin-top:1.8rem}
+  .ph{border:2px solid var(--ink);border-radius:10px;padding:1rem;background:#fffdf6;box-shadow:4px 4px 0 rgba(26,18,8,.85)}
+  .ph h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:#a0431f;margin-bottom:.3rem}
+  .ph .num{font-family:Futura,'Trebuchet MS',sans-serif;font-size:1.3rem;font-weight:700;color:var(--ink)}
+  .ph p{font-size:.82rem;margin-top:.3rem}
+
+  /* sources */
+  .sources{background:linear-gradient(180deg,var(--sky-top),#1c0f2b)}
+  .srcs{font-size:.88rem;margin-top:1.4rem}
+  .srcs li{margin-bottom:.55rem;margin-left:1.2rem;word-break:break-all}
+
+  /* footer */
+  footer{padding:4rem 2rem 3rem;text-align:center;border-top:1px solid rgba(232,93,47,.25);background:#0c0516}
+  .manifesto{max-width:640px;margin:0 auto;font-size:1rem;font-style:italic;color:var(--dust)}
+  .manifesto b{color:var(--flame);font-style:normal}
+  .fineprint{margin-top:2rem;font-size:.8rem;color:var(--dust-dim)}
+  .fineprint a{color:var(--dust-dim)}
+  .tenp{margin-top:1.4rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-family:Futura,'Trebuchet MS',sans-serif;color:#6d5c7e}
+
+  @media (prefers-reduced-motion:reduce){ .scrollcue{animation:none} }
+</style>
+</head>
+<body>
+
+<!-- ============ HERO — mountain ranch dusk ============ -->
+<header class="hero">
+  <svg class="scene" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#12081f"/>
+        <stop offset="42%" stop-color="#3b1a4a"/>
+        <stop offset="70%" stop-color="#8a2f5c"/>
+        <stop offset="88%" stop-color="#e85d2f"/>
+        <stop offset="100%" stop-color="#ffa53d"/>
+      </linearGradient>
+      <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+        <stop offset="0%" stop-color="#ffe9b0"/>
+        <stop offset="45%" stop-color="#ffa53d"/>
+        <stop offset="100%" stop-color="#ffa53d" stop-opacity="0"/>
+      </radialGradient>
+      <linearGradient id="meadow" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#5a6b3a"/>
+        <stop offset="100%" stop-color="#23301e"/>
+      </linearGradient>
+      <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#12081f" stop-opacity="0"/><stop offset="100%" stop-color="#12081f" stop-opacity="1"/>
+      </linearGradient>
+    </defs>
+    <rect width="1440" height="900" fill="url(#sky)"/>
+    <g fill="#f5ecd9">
+      <circle cx="120" cy="90" r="1.6" opacity=".8"/><circle cx="310" cy="150" r="1.1" opacity=".6"/>
+      <circle cx="530" cy="70" r="1.4" opacity=".7"/><circle cx="760" cy="120" r="1" opacity=".5"/>
+      <circle cx="980" cy="60" r="1.6" opacity=".8"/><circle cx="1180" cy="140" r="1.2" opacity=".6"/>
+      <circle cx="1340" cy="80" r="1.5" opacity=".7"/><circle cx="200" cy="230" r="1" opacity=".5"/>
+      <circle cx="880" cy="210" r="1.2" opacity=".55"/><circle cx="660" cy="30" r="1.1" opacity=".6"/>
+    </g>
+    <circle cx="720" cy="620" r="310" fill="url(#sun)" opacity=".85"/>
+    <!-- Asama-like volcano range -->
+    <path d="M0 640 L180 560 L300 615 L470 490 L640 625 L820 530 L1000 620 L1160 545 L1300 610 L1440 560 L1440 900 L0 900 Z"
+          fill="#2a1436" opacity=".95"/>
+    <path d="M380 620 L470 505 L560 620 Z" fill="#241029"/>
+    <!-- highland meadow -->
+    <path d="M0 680 Q720 640 1440 680 L1440 900 L0 900 Z" fill="url(#meadow)"/>
+    <!-- torii-ish gate + lantern silhouettes -->
+    <g stroke="#12081f" stroke-width="9" stroke-linecap="round" fill="none">
+      <line x1="660" y1="610" x2="660" y2="712"/>
+      <line x1="780" y1="610" x2="780" y2="712"/>
+      <line x1="636" y1="612" x2="804" y2="612"/>
+      <line x1="648" y1="636" x2="792" y2="636"/>
+    </g>
+    <path d="M628 606 Q720 586 812 606 L806 616 Q720 598 634 616 Z" fill="#12081f"/>
+    <!-- tents on the meadow -->
+    <g fill="#1b240f">
+      <path d="M170 712 l45 -32 45 32 Z"/><path d="M285 716 l36 -25 36 25 Z"/>
+      <path d="M1030 712 l45 -32 45 32 Z"/><path d="M1150 717 l34 -24 34 24 Z"/>
+      <circle cx="470" cy="702" r="14"/><circle cx="950" cy="704" r="12"/>
+    </g>
+    <!-- tiny campfire glow -->
+    <circle cx="720" cy="740" r="7" fill="#ffa53d"/>
+    <circle cx="720" cy="740" r="18" fill="#ffa53d" opacity=".25"/>
+    <rect y="790" width="1440" height="110" fill="url(#fade)"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="kicker"><a href="/">wastetrace.org</a> · the japan chapter · 日本編</div>
+    <h1 class="big">Your trash speaks <span class="burn">Japanese</span> now.</h1>
+    <p class="hero-sub">The honest waste guide for foreign burners at <b>Burning Japan 2026 — 千鬼夜行 Senki Yagyo</b>, Oct 8–12, Tsumagoi Bokujo ranch, Gunma. What to do with every piece of it — at the burn, in town, and on the way home.</p>
+    <div class="badges">
+      <span class="badge">🏮 Burning Japan 2026 · Tsumagoi</span>
+      <span class="badge">🗑️ Zero bins — pack it all out</span>
+      <span class="badge">📵 This page works offline</span>
+    </div>
+  </div>
+  <div class="scrollcue">▼</div>
+</header>
+
+<!-- ============ THE 60-SECOND ANSWER ============ -->
+<section class="now">
+  <div class="wrap">
+    <div class="sec-kicker">The 60-second answer · 持ち帰りの掟</div>
+    <h2>What do I do with my trash, right now?</h2>
+    <div class="rules">
+      <div class="rule"><h3>There are no trash cans at the event. None.</h3>
+        <p>You carry out 100% of your own waste — that's the official policy. Bring your own bags and sort as you go: 🔥 burnable <span class="jp">燃えるごみ</span> · 🥫 cans <span class="jp">缶</span> · 🍾 glass <span class="jp">びん</span> · 🧴 PET bottles <span class="jp">ペットボトル</span>. Compress, double-bag against smell — palm civets raid camps at night.</p></div>
+      <div class="rule"><h3>No car? The GATE takes your sorted trash on the way out.</h3>
+        <p>Official exception for public-transport attendees only: hand sorted bags to the gate at exodus — bins, cans and PET separated. Fire ash too hot to carry? There's a BBQ grill at the gate that accepts burn residue (燃えかす). Drivers: assume this is <em>not</em> for you — your trash rides home with you.</p></div>
+      <div class="rule"><h3>Never, ever dump at a konbini, station or supermarket.</h3>
+        <p>Not even trash from things you bought there. The event treats this as severe as a law violation — a Japanese camp event once lost its next year over roadside dumping. Store bins are for small on-the-spot purchases by that store's customers, never for camp trash.</p></div>
+      <div class="rule"><h3>Graywater goes home in a bottle.</h3>
+        <p>Only pure water may be poured on site. Soapy, oily, food-touched water — and yes, coffee and tea — go into a closed, labeled container (グレイウォーター) and leave with you. Never into the portable toilets: it kills them for everyone. Tea leaves don't get buried; "biodegradable" is not Leave No Trace.</p></div>
+      <div class="rule"><h3>Smokers: portable ashtray. Mandatory.</h3>
+        <p>携帯灰皿 <span class="jp">(keitai haizara)</span> — sold at every konbini for a few hundred yen. Butts <em>and ash</em> go home with you. Glitter, confetti and micro-beads are banned outright; zip-tie clippings and tape shreds go straight into a sealed bag before the wind takes them.</p></div>
+    </div>
+    <div class="bigquote">飛ぶ鳥跡を濁さず — "the departing bird does not muddy the water."<br>
+    Japan had Leave No Trace before we had a name for it.</div>
+  </div>
+</section>
+
+<!-- ============ THE VILLAGE THAT REFUSES WASTE ============ -->
+<section class="village">
+  <div class="wrap" style="text-align:center">
+    <div class="sec-kicker">Where you're standing · 嬬恋村</div>
+    <h2>This village officially refuses your trash</h2>
+    <p class="body" style="margin:0 auto 1rem">The burn is on a working cattle ranch in <b>Tsumagoi Village, Gunma</b> (嬬恋村) — Japan's #1 summer-cabbage producer, at 1,400&nbsp;m on the Manza Highway toll road. The village has made a formal declaration:</p>
+    <div class="decl">
+      <div class="no">「廃棄物の持ち込みを認めないむら」</div>
+      <span class="yes">"A village that does not accept waste brought in from outside" — no outside collection, transport, processing or disposal. Official declaration, Tsumagoi Village.</span>
+    </div>
+    <p class="body" style="margin:1rem auto 0">That means a visitor has <b>no legal public disposal option in the village — at all</b>. Local collection stations belong to resident neighborhood groups; using one as an outsider is treated like dumping on someone's lawn, and the village facility only accepts waste from residents and villa owners. Illegal dumping (不法投棄) in mountains, rivers or roadsides is a crime — up to ¥10M / 5 years under the Waste Management Act. The only moves that exist: <b>the gate (if you came by train), your accommodation (modestly, with gratitude), or your own home city's bins by its own rules.</b></p>
+  </div>
+</section>
+
+<!-- ============ HOW JAPAN SORTS ============ -->
+<section class="proof">
+  <div class="wrap">
+    <div class="sec-kicker">How Japanese sorting works · ごみの分け方</div>
+    <h2>Every town has its own rulebook</h2>
+    <p class="body">The single most important lesson: <b>garbage rules are municipal, not national.</b> "Burnable" in one city is "non-burnable" in the next. Each town sells its own <b>designated bags</b> (指定袋 — at supermarkets, drugstores and konbini <em>in that town</em>; that's how you pay for disposal), publishes its own calendar, and collects at resident-run stations, usually 6–8 a.m. on the right morning only. Wrong bag — or a black bag — simply doesn't get collected. There are essentially <b>no public trash cans</b> anywhere (most were removed after 1995 and never came back); everyone carries their trash home. So do you.</p>
+    <p class="body">Below is the real system of <b>Komoro City</b> (小諸市, Nagano) — the nearby town across the prefecture line where many burners stay, and one of the only cities in Japan that composts all food waste into fertilizer. Five bags. If you're staying somewhere else, the shape will be similar but the details <em>will</em> differ — ask your host.</p>
+
+    <div class="bags">
+      <div class="bag"><div class="swatch" style="background:#b33a2b"></div><h3>Burnable</h3><div class="jpb">燃やすごみ · red bag</div><p>Paper scraps, dirty plastics, <b>all plastic products</b> (toothbrush, hangers, toys — anything without the プラ mark), leather, shoes, cloth, wetted ash. Everything cut ≤ 50 cm.</p></div>
+      <div class="bag"><div class="swatch" style="background:#2b4a73"></div><h3>Landfill</h3><div class="jpb">埋立ごみ · blue bag</div><p>Glass, ceramics, metal items, mirrors, umbrellas, bulbs. Knives &amp; broken glass: wrap in newspaper and label 刃物 / ガラス.</p></div>
+      <div class="bag"><div class="swatch" style="background:#8a7345"></div><h3>Food waste</h3><div class="jpb">生ごみ · paper bag</div><p>Veggie scraps, leftovers, shells, coffee grounds — <b>drained of water</b>. Komoro turns it into fertilizer.</p></div>
+      <div class="bag"><div class="swatch" style="background:#295c36"></div><h3>Plastic packaging</h3><div class="jpb">プラ容器包装 · green bag · free</div><p>Only items with the プラ mark: trays, wrappers, bags, styrofoam, PET <em>caps &amp; labels</em> — rinsed and dried.</p></div>
+      <div class="bag"><div class="swatch" style="background:#9a7a1f"></div><h3>Resources</h3><div class="jpb">資源物 · containers · free</div><p>Cans → blue container. Bottles → color-sorted. PET → net. Paper &amp; cardboard tied with paper string. Clothes tied crosswise.</p></div>
+    </div>
+
+    <h2 style="margin-top:3rem">Which bin is this? — 30 burner items</h2>
+    <p class="body">Straight from Komoro City's official sorting dictionary (分別ガイドブック 第5版, March 2025). <b>Komoro's rulings — your town may differ.</b></p>
+    <div class="tblwrap">
+    <table>
+      <tr><th>Item</th><th>Category</th><th>The ruling</th></tr>
+      <tr><td>Beer / drink can <span class="jp">空き缶</span></td><td><span class="cat c-res">Resource · can</span></td><td>Empty, into the can container. Rusty cans too.</td></tr>
+      <tr><td>PET bottle <span class="jp">ペットボトル</span></td><td><span class="cat c-res">Resource · PET</span></td><td>Empty → cap off → label off → rinse → crush. Bottle to the PET net.</td></tr>
+      <tr><td>PET cap &amp; label <span class="jp">キャップ・ラベル</span></td><td><span class="cat c-pla">Plastic pkg</span></td><td>Different bin than the bottle! Green プラ bag.</td></tr>
+      <tr><td>Glass bottle <span class="jp">空きびん</span></td><td><span class="cat c-res">Resource · bottle</span></td><td>Color-sorted containers: clear / brown / other.</td></tr>
+      <tr><td>Broken glass <span class="jp">ガラス</span></td><td><span class="cat c-land">Landfill</span></td><td>Wrap in newspaper, write ガラス on it. Blue bag.</td></tr>
+      <tr><td>Cigarette butts &amp; ash <span class="jp">たばこの吸殻</span></td><td><span class="cat c-burn">Burnable</span></td><td>Red bag. (On site: portable ashtray, carry out.)</td></tr>
+      <tr><td>E-cigarette / IQOS <span class="jp">電子たばこ</span></td><td><span class="cat c-land">Landfill</span></td><td>Blue bag — it's electronics, not a butt.</td></tr>
+      <tr><td>Camp-stove gas canister <span class="jp">カセットガスボンベ</span></td><td><span class="cat c-res">Resource · can</span></td><td>Use gas up completely → can container. <b>No puncturing needed in Komoro.</b></td></tr>
+      <tr><td>Spray can <span class="jp">スプレー缶</span></td><td><span class="cat c-res">Resource · can</span></td><td>Same: fully empty, no hole.</td></tr>
+      <tr><td>Propane / LP tank <span class="jp">ＬＰガスボンベ</span></td><td><span class="cat c-no">Not collectible</span></td><td>City refuses it. Specialist contractor or the rental shop it came from.</td></tr>
+      <tr><td>BBQ charcoal <span class="jp">炭</span></td><td><span class="cat c-burn">Burnable</span></td><td>Red bag. Ash: confirm dead-out, wet it, wrap in newspaper.</td></tr>
+      <tr><td>Disposable chopsticks / skewers <span class="jp">割り箸・串</span></td><td><span class="cat c-burn">Burnable</span></td><td>Red bag.</td></tr>
+      <tr><td>Paper cups &amp; plates <span class="jp">紙コップ・紙皿</span></td><td><span class="cat c-burn">Burnable</span></td><td>NOT paper recycling — food-soiled paper burns. (Banned from gifting at BJ anyway.)</td></tr>
+      <tr><td>Food wrap <span class="jp">サランラップ</span></td><td><span class="cat c-burn">Burnable</span></td><td>Red bag — it's dirty plastic.</td></tr>
+      <tr><td>Styrofoam tray / box <span class="jp">発泡スチロール</span></td><td><span class="cat c-pla">Plastic pkg</span></td><td>Green bag, broken into pieces. Clean only.</td></tr>
+      <tr><td>Shopping bag <span class="jp">レジ袋</span></td><td><span class="cat c-pla">Plastic pkg</span></td><td>Green bag (it carries the プラ mark).</td></tr>
+      <tr><td>Food scraps / leftovers <span class="jp">残飯・生ごみ</span></td><td><span class="cat c-raw">Food waste</span></td><td>Paper bag, water drained. Becomes fertilizer in Komoro.</td></tr>
+      <tr><td>Coffee grounds / tea leaves <span class="jp">コーヒーかす・茶がら</span></td><td><span class="cat c-raw">Food waste</span></td><td>Paper bag. (Tea <em>bag</em> itself → burnable.)</td></tr>
+      <tr><td>Eggshells / shells <span class="jp">卵の殻・貝殻</span></td><td><span class="cat c-raw">Food waste</span></td><td>Paper bag.</td></tr>
+      <tr><td>Cooking oil <span class="jp">廃食用油</span></td><td><span class="cat c-res">Resource · depot</span></td><td>Collection points: city hall, Clean Hill, welfare &amp; culture centers. Solidified → burnable.</td></tr>
+      <tr><td>Tent fabric <span class="jp">テント（シート）</span></td><td><span class="cat c-burn">Burnable*</span></td><td>*Only if cut into ≤ 50 cm pieces. Whole → oversized, facility, fee.</td></tr>
+      <tr><td>Tent poles <span class="jp">テント（ポール）</span></td><td><span class="cat c-land">Landfill</span></td><td>Blue bag — metal.</td></tr>
+      <tr><td>Blue tarp <span class="jp">ブルーシート</span></td><td><span class="cat c-no">Oversized</span></td><td>Facility (cutting class) — or ≤ 50 cm pieces → burnable.</td></tr>
+      <tr><td>Sleeping bag <span class="jp">寝袋</span></td><td><span class="cat c-no">Oversized</span></td><td>Facility — or cut ≤ 50 cm → burnable.</td></tr>
+      <tr><td>Rope / cord <span class="jp">ロープ・ひも</span></td><td><span class="cat c-burn">Burnable*</span></td><td>*Cut to ≤ 50 cm.</td></tr>
+      <tr><td>Leisure sheet <span class="jp">レジャーシート</span></td><td><span class="cat c-burn">Burnable*</span></td><td>*Cut to ≤ 50 cm.</td></tr>
+      <tr><td>Cooler box <span class="jp">クーラーボックス</span></td><td><span class="cat c-no">Oversized</span></td><td>Facility (crushing class) — landfill bag only if it actually fits.</td></tr>
+      <tr><td>Ice pack <span class="jp">保冷剤</span></td><td><span class="cat c-burn">Burnable</span></td><td>Red bag.</td></tr>
+      <tr><td>Disposable hand warmer <span class="jp">使い捨てカイロ</span></td><td><span class="cat c-burn">Burnable</span></td><td>Red bag.</td></tr>
+      <tr><td>Dry-cell batteries <span class="jp">乾電池</span></td><td><span class="cat c-res">Hazard pickup</span></td><td>Special hazardous collection — never in a regular bag.</td></tr>
+      <tr><td>Rechargeable / power bank <span class="jp">モバイルバッテリー</span></td><td><span class="cat c-no">Not collectible</span></td><td>Store take-back (JBRC network). Lithium starts truck fires — never bag it. Anywhere. Ever.</td></tr>
+      <tr><td>Disposable lighter <span class="jp">使い捨てライター</span></td><td><span class="cat c-land">Landfill</span></td><td>Empty it completely first. Blue bag or hazardous collection.</td></tr>
+      <tr><td>Aluminum foil <span class="jp">アルミホイル</span></td><td><span class="cat c-burn">Burnable</span></td><td>Red bag — yes, really. Komoro's ruling.</td></tr>
+    </table>
+    </div>
+    <p class="note">Komoro extras: self-haul to <b>Clean Hill Komoro</b> (クリーンヒルこもろ, 菱平367-1, ☎ 0267-26-0022) weekdays 9–12 / 13–16 &amp; 3rd Sunday morning — intake form + photo ID + cash, ¥100 per 10 kg, oversized items add ¥100–1,000 each. Food waste not accepted there. The facility's waste heat runs a ¥100 public bath. Whether a <em>non-resident visitor</em> may self-haul is not stated anywhere official — call first (see below).</p>
+  </div>
+</section>
+
+<!-- ============ PHRASE CARD ============ -->
+<section class="phrases">
+  <div class="wrap">
+    <div class="sec-kicker">The phrase card · 指差し会話</div>
+    <h2>Show, don't say</h2>
+    <p class="body">Screenshot this section. Pointing at a phrase works perfectly in any shop, inn or city office.</p>
+    <div class="cards">
+      <div class="pc"><div class="ja">これはどのごみですか？</div><div class="ro">kore wa dono gomi desu ka?</div><div class="en">Which garbage category is this?</div></div>
+      <div class="pc"><div class="ja">このごみはどこに捨てられますか？</div><div class="ro">kono gomi wa doko ni suteraremasu ka?</div><div class="en">Where can I dispose of this?</div></div>
+      <div class="pc"><div class="ja">ごみは持ち帰ります。</div><div class="ro">gomi wa mochikaerimasu.</div><div class="en">I will take my garbage home. <em>(magic words — instant respect)</em></div></div>
+      <div class="pc"><div class="ja">指定ごみ袋はありますか？</div><div class="ro">shitei gomi-bukuro wa arimasu ka?</div><div class="en">Do you sell the designated garbage bags?</div></div>
+      <div class="pc"><div class="ja">携帯灰皿はありますか？</div><div class="ro">keitai haizara wa arimasu ka?</div><div class="en">Do you sell portable ashtrays?</div></div>
+      <div class="pc"><div class="ja">ごみを少し処分していただけますか？<br>有料でも構いません。</div><div class="ro">gomi o sukoshi shobun shite itadakemasu ka? yūryō demo kamaimasen.</div><div class="en">Could you dispose of a small amount of garbage? I'm happy to pay. <em>(for your inn/host — ask, never assume)</em></div></div>
+    </div>
+    <div class="vocab">
+      <span class="vc"><b>燃えるごみ</b> burnable</span>
+      <span class="vc"><b>燃えないごみ</b> non-burnable</span>
+      <span class="vc"><b>生ごみ</b> food waste</span>
+      <span class="vc"><b>資源ごみ</b> recyclables</span>
+      <span class="vc"><b>粗大ごみ</b> oversized</span>
+      <span class="vc"><b>ペットボトル</b> PET bottle</span>
+      <span class="vc"><b>缶</b> can · <b>びん</b> glass bottle</span>
+      <span class="vc"><b>指定袋</b> designated bag</span>
+      <span class="vc"><b>ごみ集積所</b> collection station</span>
+      <span class="vc"><b>携帯灰皿</b> portable ashtray</span>
+      <span class="vc"><b>不法投棄</b> illegal dumping (a crime)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HONEST SECTION ============ -->
+<section class="burns">
+  <div class="wrap">
+    <div class="sec-kicker">Radical honesty · 正直に</div>
+    <h2>What we could not verify</h2>
+    <p class="body">A wrong bin instruction is worse than "ask the city office." Everything above traces to official municipal pages or Burning Japan's own published rules. These points we could <b>not</b> confirm — don't guess, call:</p>
+    <div class="unver">
+      <h3>⚠️ Unverified — ask before acting</h3>
+      <ul>
+        <li><b>Can a non-resident visitor self-haul waste to Clean Hill Komoro?</b> The official pages address residents' household waste only. → call 0267-22-1700.</li>
+        <li><b>Where exactly Komoro's designated bags are sold</b> — "supermarkets &amp; konbini in the city" is the standard pattern, but no official store list was found.</li>
+        <li><b>Komoro collection days</b> — they differ by district (区); only your host knows which district you're in.</li>
+        <li><b>Whether the BJ gate takes trash from drivers</b> — official text limits it to public-transport attendees. Drivers: assume no.</li>
+        <li><b>English-language leaflets</b> — Tsumagoi publishes 8 languages (Vietnamese, Khmer, Lao, Chinese, Myanmar, Indonesian, Nepali, Bengali) but no English; Komoro's lookup tool is Japanese-only.</li>
+      </ul>
+    </div>
+    <div class="phones">
+      <div class="ph"><h3>Komoro City · waste section<br>小諸市 生活環境課</h3><div class="num">0267-22-1700</div><p>Mon–Fri office hours · genryo@city.komoro.nagano.jp · Japanese (bring your phrase card or a translation app)</p></div>
+      <div class="ph"><h3>Clean Hill Komoro<br>クリーンヒルこもろ</h3><div class="num">0267-26-0022</div><p>Komoro's disposal facility · weekdays 9–12 / 13–16 · 3rd Sun 9–11:30</p></div>
+      <div class="ph"><h3>Tsumagoi Village · residents div.<br>嬬恋村 住民課</h3><div class="num">0279-96-0515</div><p>The village the burn is in. Remember: it officially accepts no visitor waste.</p></div>
+      <div class="ph"><h3>Nishiagatsuma Env. Center<br>西吾妻環境衛生センター</h3><div class="num">0279-82-2736</div><p>Tsumagoi's facility — residents &amp; villa owners only.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOURCES ============ -->
+<section class="sources">
+  <div class="wrap">
+    <div class="sec-kicker">Sources · 出典</div>
+    <h2>Where every fact comes from</h2>
+    <p class="body">All checked October 2026. If an official page and this guide ever disagree, the official page wins.</p>
+    <ul class="srcs">
+      <li>🏮 Burning Japan — English info, LNT policy, 2026 Survival Guide:<br>
+        <a href="https://www.burningjapan.org/english-info/">burningjapan.org/english-info/</a> ·
+        <a href="https://www.burningjapan.org/lnt/">burningjapan.org/lnt/</a> ·
+        <a href="https://www.burningjapan.org/wiki/2026_Survival_Guide">burningjapan.org/wiki/2026_Survival_Guide</a></li>
+      <li>🏔️ Tsumagoi Village — garbage rules, paid-bag system, "no outside waste" declaration:<br>
+        <a href="https://www.vill.tsumagoi.gunma.jp/www/contents/1000000000170/index.html">vill.tsumagoi.gunma.jp …/170/</a> ·
+        <a href="https://www.vill.tsumagoi.gunma.jp/www/contents/1000000000171/index.html">…/171/</a> ·
+        <a href="https://www.vill.tsumagoi.gunma.jp/www/contents/1000000000186/index.html">…/186/ (declaration)</a></li>
+      <li>🏯 Komoro City — official sorting guidebook (5th ed., March 2025), paid-bag system, Clean Hill rules:<br>
+        <a href="https://www.city.komoro.lg.jp/material/files/group/10/dai5bunnbetugaido.pdf">city.komoro.lg.jp — 分別ガイドブック (PDF)</a> ·
+        <a href="https://www.city.komoro.lg.jp/soshikikarasagasu/shiminseikatsubu/seikatsukankyoka/1/1/2/1824.html">Clean Hill self-haul page</a> ·
+        <a href="https://www.city.komoro.lg.jp/soshikikarasagasu/shiminseikatsubu/seikatsukankyoka/1/1/2/1195.html">bag-fee page</a> ·
+        <a href="https://www.gomisaku.jp/0080/">ごみサク item lookup</a></li>
+      <li>🔥 Clean Hill Komoro facility: <a href="https://cleanhill-komoro.jp/">cleanhill-komoro.jp</a></li>
+    </ul>
+    <p class="body" style="margin-top:1.6rem;font-style:italic">Not affiliated with Burning Japan, Tsumagoi Village or Komoro City — we're burners who read the official rules so you don't leave a trace by accident.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER MANIFESTO ============ -->
+<footer>
+  <p class="manifesto"><b>This page leaves no trace.</b><br>
+  No cookies. No trackers. No analytics. No fonts fetched, no scripts called, no requests made.
+  It loads once and works offline in a mountain pasture with one bar of signal — that's the point.<br>
+  When you close this tab, we forget you were ever here — the playa way. 飛ぶ鳥跡を濁さず。</p>
+  <p class="tenp">Leaving No Trace · Civic Responsibility · Communal Effort · Gifting</p>
+  <p class="fineprint">WASTE TRACE — a nonprofit project of the Terrible Turtles Camp crew &amp; the Agent ʻOhana ·
+  <a href="mailto:aloha@myagentohana.com">aloha@myagentohana.com</a><br>
+  <a href="/">← back to wastetrace.org</a> · Not affiliated with or endorsed by Burning Man Project.</p>
+</footer>
+
+</body>
+</html>
