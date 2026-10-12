@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JAPAN — Leave No Trace at Burning Japan · WASTE TRACE</title>
-<meta name="description" content="The honest waste guide for foreign burners at Burning Japan 2026 (Tsumagoi, Gunma): pack-it-out law, how Japanese garbage sorting really works, which bin for 30 burner items, Japanese phrases to show a shop or host, and the city office numbers to call.">
+<meta name="description" content="The honest waste guide for foreign burners at Burning Japan 2026 (Tsumagoi, Gunma): pack-it-out law, how Japanese garbage sorting really works, which bin for 30 burner items, the three buses a day off the ranch with real times, fares and last-train cutoffs, Japanese phrases to show a driver, shop or host, and the numbers to call.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏮</text></svg>">
 <style>
   :root{
@@ -153,6 +153,53 @@
   .fineprint a{color:var(--dust-dim)}
   .tenp{margin-top:1.4rem;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-family:Futura,'Trebuchet MS',sans-serif;color:#6d5c7e}
 
+  /* ---------- EXODUS (paper band, reuses .tblwrap/.ph/.unver/.pc) ---------- */
+  .exodus{background:var(--paper);color:var(--ink);border-top:1px solid rgba(26,18,8,.3)}
+  .exodus h2{color:var(--ink)}
+  .exodus .sec-kicker{color:#a0431f}
+  .exodus p.body{color:var(--ink)}
+  .exodus .jp{color:#7a5c3a}
+  .threebus{
+    border:2px solid var(--ink);border-radius:12px;background:#1a1208;color:var(--paper);
+    padding:1.4rem 1.5rem;margin:2rem 0;box-shadow:4px 4px 0 rgba(26,18,8,.4);text-align:center;
+  }
+  .threebus .lab{font-family:Futura,'Trebuchet MS',sans-serif;text-transform:uppercase;letter-spacing:.22em;font-size:.74rem;color:var(--flame)}
+  .threebus .times{font-family:Futura,'Trebuchet MS',sans-serif;font-size:clamp(1.5rem,6vw,2.6rem);font-weight:700;letter-spacing:.06em;margin:.5rem 0 .35rem;color:var(--paper)}
+  .threebus .sub{font-size:.9rem;color:var(--dust-dim);font-style:italic}
+  .threebus .sub b{color:var(--flame);font-style:normal}
+  .rank{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1rem;margin:2rem 0}
+  .rt{
+    border:2px solid var(--ink);border-radius:10px;padding:1rem;background:#fffdf6;
+    box-shadow:4px 4px 0 rgba(26,18,8,.85);display:flex;flex-direction:column;
+  }
+  .rt .medal{font-family:Futura,'Trebuchet MS',sans-serif;font-size:.72rem;text-transform:uppercase;letter-spacing:.14em;
+    display:inline-block;background:var(--ink);color:var(--flame);border-radius:999px;padding:.2rem .7rem;margin-bottom:.6rem;align-self:flex-start}
+  .rt h3{font-size:.95rem;text-transform:uppercase;letter-spacing:.08em;color:#a0431f;margin-bottom:.5rem;line-height:1.3}
+  .rt .leg{font-size:.86rem;margin-bottom:.5rem}
+  .rt .leg b{color:#8a2f1c}
+  .rt .money{font-family:Futura,'Trebuchet MS',sans-serif;font-size:1rem;font-weight:700;margin-top:auto;padding-top:.6rem;border-top:1px solid rgba(26,18,8,.2)}
+  .rt .money span{font-family:Georgia,serif;font-weight:400;font-size:.82rem;font-style:italic;display:block;color:#5c4a33}
+  .clock{border:2px dashed #b33a2b;border-radius:12px;background:#fff4e6;padding:1.4rem 1.5rem;margin:2rem 0}
+  .clock h3{color:#a0431f;text-transform:uppercase;font-size:.95rem;letter-spacing:.16em;margin-bottom:.9rem}
+  .clock dl{display:grid;grid-template-columns:auto 1fr;gap:.5rem .9rem;font-size:.92rem;align-items:baseline}
+  .clock dt{font-family:Futura,'Trebuchet MS',sans-serif;font-weight:700;color:#8a2f1c;white-space:nowrap}
+  .clock dd{margin:0}
+  .linkline{border-left:4px solid var(--ember);padding-left:1.2rem;margin:2rem 0;font-size:1.02rem}
+  .linkline b{color:#8a2f1c}
+  .exodus .pc{border:2px solid var(--ink);background:#fffdf6;box-shadow:4px 4px 0 rgba(26,18,8,.85);border-radius:10px}
+  .exodus .pc .ja{color:var(--ink)}
+  .exodus .pc .ro{color:#7a5c3a}
+  .exodus .pc .en{color:var(--ink)}
+  .exodus .vc{border-color:rgba(26,18,8,.4);background:#fffdf6;color:var(--ink)}
+  .exodus .vc b{color:#a0431f}
+  .exodus .tblwrap table{min-width:0}
+  .exodus .tblwrap th,.exodus .tblwrap td{padding:.5rem .45rem}
+  .exodus .tblwrap td .jp{font-size:.74rem;line-height:1.35}
+  @media(min-width:620px){ .exodus .tblwrap table{min-width:580px} .exodus .tblwrap th,.exodus .tblwrap td{padding:.55rem .8rem} }
+  .c-bus{background:#2b5c73;color:#f5ecd9}
+  .c-train{background:#4a2b73;color:#f5ecd9}
+  .c-stop{background:#73562b;color:#f5ecd9}
+
   @media (prefers-reduced-motion:reduce){ .scrollcue{animation:none} }
 </style>
 </head>
@@ -220,10 +267,11 @@
   <div class="hero-inner">
     <div class="kicker"><a href="/">wastetrace.org</a> · the japan chapter · 日本編</div>
     <h1 class="big">Your trash speaks <span class="burn">Japanese</span> now.</h1>
-    <p class="hero-sub">The honest waste guide for foreign burners at <b>Burning Japan 2026 — 千鬼夜行 Senki Yagyo</b>, Oct 8–12, Tsumagoi Bokujo ranch, Gunma. What to do with every piece of it — at the burn, in town, and on the way home.</p>
+    <p class="hero-sub">The honest waste guide for foreign burners at <b>Burning Japan 2026 — 千鬼夜行 Senki Yagyo</b>, Oct 8–12, Tsumagoi Bokujo ranch, Gunma. What to do with every piece of it — at the burn, in town, and on the way home. Plus the <a href="#exodus" style="color:var(--flame)">three buses a day</a> that are the only way off the mountain.</p>
     <div class="badges">
       <span class="badge">🏮 Burning Japan 2026 · Tsumagoi</span>
       <span class="badge">🗑️ Zero bins — pack it all out</span>
+      <a class="badge" href="#exodus" style="text-decoration:none">🚌 Exodus — buses &amp; last trains →</a>
       <span class="badge">📵 This page works offline</span>
     </div>
   </div>
@@ -231,7 +279,7 @@
 </header>
 
 <!-- ============ THE 60-SECOND ANSWER ============ -->
-<section class="now">
+<section class="now" id="now">
   <div class="wrap">
     <div class="sec-kicker">The 60-second answer · 持ち帰りの掟</div>
     <h2>What do I do with my trash, right now?</h2>
@@ -253,7 +301,7 @@
 </section>
 
 <!-- ============ THE VILLAGE THAT REFUSES WASTE ============ -->
-<section class="village">
+<section class="village" id="village">
   <div class="wrap" style="text-align:center">
     <div class="sec-kicker">Where you're standing · 嬬恋村</div>
     <h2>This village officially refuses your trash</h2>
@@ -267,7 +315,7 @@
 </section>
 
 <!-- ============ HOW JAPAN SORTS ============ -->
-<section class="proof">
+<section class="proof" id="bins">
   <div class="wrap">
     <div class="sec-kicker">How Japanese sorting works · ごみの分け方</div>
     <h2>Every town has its own rulebook</h2>
@@ -327,7 +375,7 @@
 </section>
 
 <!-- ============ PHRASE CARD ============ -->
-<section class="phrases">
+<section class="phrases" id="phrases">
   <div class="wrap">
     <div class="sec-kicker">The phrase card · 指差し会話</div>
     <h2>Show, don't say</h2>
@@ -356,8 +404,186 @@
   </div>
 </section>
 
+<!-- ============ EXODUS ============ -->
+<section class="exodus" id="exodus">
+  <div class="wrap">
+    <div class="sec-kicker">Getting out · 脱出</div>
+    <h2>🚌 Exodus — how you get home<br>(and how your trash gets home with you)</h2>
+    <p class="body">You are at <b>1,400&nbsp;m</b>, on a working cattle ranch, beside a <b>cars-only private toll road</b>. Burning Japan's own access page sums the situation up in one line: <em>"only 3 buses a day."</em> That is not a figure of speech. Miss the last one and you are sleeping in Gunma — so the exodus plan is part of your packing list, not an afterthought.</p>
+    <p class="body">Everything below comes from the <b>Seibu Kanko Bus official autumn 2026 timetable, valid from 1 October 2026</b> — the very PDF Burning Japan links from its Access page. The ranch has its own bus stop in it: <b>嬬恋牧場 愛妻の鐘</b> <span class="jp">(Tsumagoi Bokujo · Aisai no Kane)</span>, right at the bell. Route letter <b>M</b>.</p>
+
+    <div class="threebus">
+      <div class="lab">The only three buses off the ranch · 嬬恋牧場 愛妻の鐘発</div>
+      <div class="times">10:08 · 14:38 · 16:53</div>
+      <div class="sub">Identical on weekdays, Saturdays, Sundays and national holidays.<br>
+        <b>16:53 is the last bus of the day.</b> There is nothing after it.</div>
+    </div>
+
+    <h3 style="font-size:1.1rem;text-transform:uppercase;letter-spacing:.1em;color:#a0431f;margin:2.4rem 0 .4rem">The three ways home, ranked</h3>
+    <p class="body" style="margin-bottom:0">One bus does all of them — you just get off at a different stop.</p>
+
+    <div class="rank">
+      <div class="rt">
+        <span class="medal">① best · fewest things to go wrong</span>
+        <h3>Via Karuizawa 軽井沢</h3>
+        <div class="leg"><b>Stay on the bus to the end.</b> Aisai&nbsp;no&nbsp;Kane → Manza-Kazawaguchi Sta. → Onioshidashi-en → Naka-Karuizawa → <b>Karuizawa Sta.</b></div>
+        <div class="leg">16:53 → <b>18:30</b> (1&nbsp;h&nbsp;37, 34.4&nbsp;km)<br>also 10:08 → 11:45 · 14:38 → 16:15</div>
+        <div class="leg">Then <b>Hokuriku Shinkansen</b> to Tokyo, ~1&nbsp;h, several per hour; the last departure to Tokyo sits around <b>22:21</b>, so a 18:30 arrival leaves you hours of slack. For Nagano, Ueda or <b>Komoro</b>, change at Karuizawa to the Shinano Railway (Komoro ≈ ¥500, ~25&nbsp;min).</div>
+        <div class="money">¥2,490 bus + ≈¥5,490 shinkansen<span>≈¥7,980 to Tokyo · ~3 h 10 door to door · one transfer, big station, staffed, food, lockers, toilets</span></div>
+      </div>
+
+      <div class="rt">
+        <span class="medal">② cheapest · the local line</span>
+        <h3>Via JR Agatsuma Line 吾妻線</h3>
+        <div class="leg"><b>Get off after 31 minutes</b> at <b>万座・鹿沢口駅</b> Manza-Kazawaguchi Sta. (8.8&nbsp;km down the mountain) and take the JR local toward Takasaki.</div>
+        <div class="leg">The bus is <b>timed to the train</b>: 10:08→10:53 · 14:38→15:24 · 16:53→<b>17:36</b> — a 12–15 minute connection each time. That is not luck, it's the schedule.</div>
+        <div class="leg">Manza-Kazawaguchi → Tokyo, 178&nbsp;km: <b>2&nbsp;h&nbsp;53</b> with the Shinkansen from Takasaki, or <b>3&nbsp;h&nbsp;52</b> all-local. Trains out of the valley are roughly two-hourly — and the last one is <b>20:14</b>.</div>
+        <div class="money">¥890 bus + ¥3,520 train<span>¥4,410 all-local to Tokyo · ¥6,930 using the shinkansen from Takasaki (+¥2,510 non-reserved) · tiny unstaffed-feeling station, konbini and the village tourist office across the road</span></div>
+      </div>
+
+      <div class="rt">
+        <span class="medal">③ one seat all the way</span>
+        <h3>Highway bus via 長野原草津口</h3>
+        <div class="leg">Take the <b>14:38</b> bus → Manza-Kazawaguchi 15:09 → JR 15:24 → <b>Naganohara-Kusatsuguchi</b> ~15:40. Then JR Bus Kanto's <b>上州ゆめぐり号</b> straight to the capital.</div>
+        <div class="leg">Departures from Naganohara-Kusatsuguchi toward Tokyo/Shinjuku: 06:23 · 10:23 · 11:53 · 13:53 · 14:23 · 14:53 · 15:23 · <b>16:23</b> · 17:53. The 16:23 reaches <b>Basuta Shinjuku 20:08</b> / <b>Tokyo Sta. Nihombashi-guchi 20:33</b>.</div>
+        <div class="leg">⚠️ <b>Seats are reserved — book it before you leave the ranch.</b> Counter, konbini (Lawson / MiniStop), or kousokubus.net; cut-off is 60 minutes before the first stop if you buy at a konbini.</div>
+        <div class="money">¥890 + ¥240ish JR + ¥3,200 bus<span>≈¥4,330 · ¥3,040 if you pay the bus online · one long sleep, no stairs, no changes after you sit down</span></div>
+      </div>
+    </div>
+
+    <p class="body"><b>And the one that doesn't work:</b> ⚠️ the <b>Manza Bus Terminal ↔ Shirane-kazan ↔ Kusatsu Onsen</b> stretch is <b>運休 — suspended</b>, printed right on the current timetable. Do not plan an exodus "over the top" to Kusatsu. The Kusatsu highway bus is still reachable, but only the long way round, down the valley and through Naganohara-Kusatsuguchi as in route ③.</p>
+
+    <!-- ===== THE TIMETABLE ===== -->
+    <h3 style="font-size:1.1rem;text-transform:uppercase;letter-spacing:.1em;color:#a0431f;margin:2.6rem 0 .4rem">The actual timetable · 2026年秋ダイヤ</h3>
+    <p class="body">Route <b>M</b>, downhill (toward Karuizawa). Screenshot it — this is the whole exodus on one grid.</p>
+    <div class="tblwrap">
+      <table>
+        <tr><th>Stop</th><th>Bus 1</th><th>Bus 2</th><th>Bus 3 · last</th></tr>
+        <tr><td>万座バスターミナル <span class="jp">Manza Bus Terminal</span></td><td>9:55</td><td>14:25</td><td>16:40</td></tr>
+        <tr><td><b>嬬恋牧場 愛妻の鐘</b> <span class="jp">Tsumagoi Bokujo · Aisai no Kane — THE BURN</span></td><td><b>10:08</b></td><td><b>14:38</b></td><td><b>16:53</b></td></tr>
+        <tr><td>嬬恋プリンスホテル前 <span class="jp">Tsumagoi Prince Hotel-mae</span></td><td>10:18</td><td>14:48</td><td>17:03</td></tr>
+        <tr><td>万座・鹿沢口駅 <span class="jp">Manza-Kazawaguchi Sta. — JR Agatsuma Line</span></td><td>10:39</td><td>15:09</td><td>17:24</td></tr>
+        <tr><td>鬼押出し園 <span class="jp">Onioshidashi-en</span></td><td>10:55</td><td>15:25</td><td>17:40</td></tr>
+        <tr><td>中軽井沢駅 <span class="jp">Naka-Karuizawa Sta.</span></td><td>11:32</td><td>16:02</td><td>18:17</td></tr>
+        <tr><td><b>軽井沢駅</b> <span class="jp">Karuizawa Sta. — Hokuriku Shinkansen</span></td><td><b>11:45</b></td><td><b>16:15</b></td><td><b>18:30</b></td></tr>
+      </table>
+    </div>
+    <p class="note">Coming <em>in</em> the other way, the same three buses leave 万座・鹿沢口駅 at <b>8:32 · 12:53 · 15:08</b> and reach the bell at <b>8:53 · 13:14 · 15:29</b>. Karuizawa Sta. departures that reach the ranch: <b>9:10 · 13:00 · 15:05</b>&nbsp;(Sat/Sun/holiday)&nbsp;/&nbsp;<b>9:10 · 13:00 · 15:55</b>&nbsp;(weekday) — read the PDF, the Karuizawa end has many more buses that stop short of the mountain.</p>
+
+    <p class="body" style="margin-top:1.6rem">And the trains waiting at the bottom. <b>万座・鹿沢口駅 → Takasaki/Shin-Maebashi</b> (checked for Mon 12 Oct 2026, a national holiday):</p>
+    <div class="tblwrap">
+      <table>
+        <tr><th>Departure</th><th>Connects from</th><th>Note</th></tr>
+        <tr><td>06:48 · 07:20 · 08:35</td><td><span class="cat c-stop">no bus yet</span></td><td>Early birds only — the first bus down doesn't arrive until 10:39.</td></tr>
+        <tr><td><b>10:53</b></td><td><span class="cat c-bus">bus 10:08</span></td><td>14 min to change. Easy.</td></tr>
+        <tr><td>12:47</td><td><span class="cat c-stop">no bus</span></td><td>Only if you taxied or hitched down.</td></tr>
+        <tr><td><b>15:24</b></td><td><span class="cat c-bus">bus 14:38</span></td><td>15 min. This is the one that catches the 16:23 highway bus.</td></tr>
+        <tr><td>16:21</td><td><span class="cat c-stop">no bus</span></td><td>—</td></tr>
+        <tr><td><b>17:36</b></td><td><span class="cat c-bus">bus 16:53</span></td><td>12 min. The last bus-to-train handshake of the day.</td></tr>
+        <tr><td>18:59</td><td><span class="cat c-stop">no bus</span></td><td>Last departure that still reaches Tokyo the same night: 21:52 via shinkansen, or 22:51 all-local.</td></tr>
+        <tr><td>20:14</td><td><span class="cat c-train">last train</span></td><td>Last train out of the valley. Whether it still connects to Tokyo the same night — <b>unverified, check on the day.</b></td></tr>
+      </table>
+    </div>
+
+    <!-- ===== LEAVE-BY CLOCK ===== -->
+    <div class="clock">
+      <h3>⏰ The leave-by clock</h3>
+      <dl>
+        <dt>16:40</dt><dd><b>Be standing at the bell.</b> The 16:53 is the last bus off the ranch, full stop. A rural bus will not wait while you fold a tent.</dd>
+        <dt>16:00</dt><dd>Last sane moment to <b>finish sorting your pack-out bags</b>. You cannot sort while boarding — see below.</dd>
+        <dt>14:38</dt><dd>The comfortable Tokyo bus. Karuizawa 16:15, home by dinner; or the only bus that connects to the <b>16:23 highway bus</b>.</dd>
+        <dt>14:00</dt><dd>Last reasonable moment to <b>phone a taxi</b> if you've decided against the bus (there is no rank at the ranch and no rideshare app coverage).</dd>
+        <dt>10:08</dt><dd>The early out. Karuizawa 11:45, Tokyo by early afternoon.</dd>
+        <dt>Missed it?</dt><dd>Taxi down (~30 min) to catch the 18:59 or the final 20:14 train — or <b>stay the night</b>. Nearest beds: Manza Onsen (up the hill, the inns run their own shuttles), the Tsumagoi / Manza-Kazawaguchi station area, or Kusatsu Onsen. Book from the ranch while you still have a bar of signal.</dd>
+        <dt>Tue · DBK</dt><dd>Site-restoration day runs until roughly 15:00. The Survival Guide says the organisers will <b>give volunteers a rideshare toward Tokyo</b> if they want one — and the three buses run exactly the same on the Tuesday, so staying for DBK costs you nothing in transport.</dd>
+      </dl>
+    </div>
+
+    <!-- ===== THE TRASH LINK ===== -->
+    <h3 style="font-size:1.1rem;text-transform:uppercase;letter-spacing:.1em;color:#a0431f;margin:2.6rem 0 .4rem">Why an exodus chapter lives on a waste site</h3>
+    <p class="linkline">Because <b>how you leave decides where your garbage ends up.</b> The bus doesn't have a luggage bay. The station has a konbini across the road. Those two facts have ended events before.</p>
+
+    <div class="rules" style="margin-top:1.4rem">
+      <div class="rule" style="border-color:rgba(26,18,8,.35);background:#fffdf6;color:var(--ink)">
+        <h3 style="color:#a0431f">No car? The GATE takes your sorted trash on the way out.</h3>
+        <p>This is the official concession for public-transport attendees, and it is the single best reason to come by train. Hand it over <b>already separated</b> — <span class="jp">燃えるごみ</span> burnable / <span class="jp">缶</span> cans / <span class="jp">ペットボトル</span> PET, in their own bags. Fire residue <span class="jp">(燃えかす)</span> goes on the <b>BBQ grill at the gate</b> if it's too hot to carry. Drivers: this is not for you — <b>100% of it goes home in your boot.</b></p>
+      </div>
+      <div class="rule" style="border-color:rgba(26,18,8,.35);background:#fffdf6;color:var(--ink)">
+        <h3 style="color:#a0431f">Sort before you queue. You cannot sort while boarding.</h3>
+        <p>Picture it honestly: one door, a numbered-ticket machine, a fare box, people behind you, a driver on a timetable, 8.8&nbsp;km of switchbacks ahead. Nobody tips out a bin bag on the step. Do the separation at your camp with daylight and gloves, tie it, compress it, double-bag it against smell, and arrive with <b>bags you can carry on your lap</b>.</p>
+      </div>
+      <div class="rule" style="border-color:rgba(26,18,8,.35);background:#fffdf6;color:var(--ink)">
+        <h3 style="color:#a0431f">Never the station. Never the konbini. Never the bus terminal.</h3>
+        <p>The convenience store beside Manza-Kazawaguchi Station is the most tempting bin in Gunma, and dumping there is <b>absolutely forbidden</b> — Burning Japan's words, no exception even for things you bought in that shop. The same goes for Karuizawa Station, Kusatsu's bus terminal and every rest stop on the way. <a href="#village">Tsumagoi Village formally refuses outside waste</a>; a past Japanese burn lost its venue over exactly this. Carry it to where you sleep, then sort it <a href="#bins">by that town's rules</a>.</p>
+      </div>
+      <div class="rule" style="border-color:rgba(26,18,8,.35);background:#fffdf6;color:var(--ink)">
+        <h3 style="color:#a0431f">Graywater rides home too — cap tight.</h3>
+        <p>Soapy, oily, sweet, tea- or coffee-coloured water goes in sealed bottles labelled <span class="jp">グレイウォーター</span>, upright, in a bag that can hold a leak. Two hours of mountain hairpins will test every lid you own. Pure water only may go in the street drains at the burn; nothing goes in the toilets, ever.</p>
+      </div>
+      <div class="rule" style="border-color:rgba(26,18,8,.35);background:#fffdf6;color:var(--ink)">
+        <h3 style="color:#a0431f">Plan the pack-out before you plan the party.</h3>
+        <p>Coming by train means every can, bottle and bag you bring, you also <b>carry back up the step of a bus</b>. That is the real reason burners buy fewer cans, decant drinks into a bottle, strip packaging at home and skip paper plates. Leave No Trace isn't only an ethic out here — it's a weight limit.</p>
+      </div>
+    </div>
+
+    <!-- ===== PHRASE CARD ===== -->
+    <h3 style="font-size:1.1rem;text-transform:uppercase;letter-spacing:.1em;color:#a0431f;margin:2.6rem 0 .4rem">Phrase card for the bus &amp; the station</h3>
+    <p class="body">Screenshot it. Rural drivers rarely speak English, and pointing works perfectly. Pair it with the <a href="#phrases">garbage phrase card</a> above.</p>
+    <div class="cards">
+      <div class="pc"><div class="ja">このバスは軽井沢駅に行きますか？</div><div class="ro">kono basu wa Karuizawa-eki ni ikimasu ka?</div><div class="en">Does this bus go to Karuizawa Station? <em>(swap in 万座・鹿沢口駅 Manza-Kazawaguchi-eki)</em></div></div>
+      <div class="pc"><div class="ja">嬬恋牧場・愛妻の鐘から乗りました。</div><div class="ro">Tsumagoi-bokujō Aisai-no-kane kara norimashita.</div><div class="en">I boarded at Tsumagoi Bokujo / Aisai no Kane. <em>(say it when you pay — the fare depends on where you got on)</em></div></div>
+      <div class="pc"><div class="ja">万座・鹿沢口駅で降ります。</div><div class="ro">Manza-Kazawaguchi-eki de orimasu.</div><div class="en">I'm getting off at Manza-Kazawaguchi Station.</div></div>
+      <div class="pc"><div class="ja">次のバスは何時ですか？<br>これが最終バスですか？</div><div class="ro">tsugi no basu wa nanji desu ka? kore ga saishū-basu desu ka?</div><div class="en">What time is the next bus? Is this the last bus?</div></div>
+      <div class="pc"><div class="ja">東京方面の最終電車は何時ですか？</div><div class="ro">Tōkyō-hōmen no saishū-densha wa nanji desu ka?</div><div class="en">What time is the last train towards Tokyo?</div></div>
+      <div class="pc"><div class="ja">タクシーを呼んでいただけますか？</div><div class="ro">takushī o yonde itadakemasu ka?</div><div class="en">Could you call me a taxi, please? <em>(the station's tourist office, 1 min away, can do this)</em></div></div>
+      <div class="pc"><div class="ja">荷物が多いのですが、乗れますか？</div><div class="ro">nimotsu ga ōi no desu ga, noremasu ka?</div><div class="en">I have a lot of luggage — may I still board?</div></div>
+      <div class="pc"><div class="ja">このごみは持ち帰ります。捨てません。</div><div class="ro">kono gomi wa mochikaerimasu. sutemasen.</div><div class="en">I'm taking this garbage home. I'm not dumping it. <em>(magic words at any counter)</em></div></div>
+    </div>
+    <div class="vocab">
+      <span class="vc"><b>時刻表</b> jikokuhyō — timetable</span>
+      <span class="vc"><b>整理券</b> seiriken — numbered ticket you take on boarding</span>
+      <span class="vc"><b>運賃</b> unchin — fare</span>
+      <span class="vc"><b>終電</b> shūden — last train</span>
+      <span class="vc"><b>最終バス</b> saishū-basu — last bus</span>
+      <span class="vc"><b>運休</b> unkyū — service suspended</span>
+      <span class="vc"><b>乗り換え</b> norikae — transfer</span>
+      <span class="vc"><b>自由席</b> jiyūseki — non-reserved seat</span>
+      <span class="vc"><b>片道</b> katamichi — one way</span>
+      <span class="vc"><b>有料道路</b> yūryō-dōro — toll road (don't walk on it)</span>
+    </div>
+    <p class="note">How to pay the bus: take a <b>整理券</b> ticket when you board, pay at the front when you get off. <b>Suica / PASMO and contactless cards work</b> on this route, and the fare box changes ¥1,000 notes — nothing larger. Carry coins anyway; 1,400&nbsp;m is no place to discover an empty IC card.</p>
+
+    <!-- ===== UNVERIFIED ===== -->
+    <div class="unver">
+      <h3>⚠️ Unverified — call before you bet your night on it</h3>
+      <ul>
+        <li><b>Timetables are seasonal.</b> Everything above is the <b>autumn diagram, valid from 1 Oct 2026</b>. A winter diagram replaces it (and in these mountains winter diagrams cut service). <b>Re-download the PDF before you travel</b> and check the stop-post on the day.</li>
+        <li><b>Burning Japan's own Access page says the limited express 草津・四万 No.1/No.3 runs direct from Ueno to Manza-Kazawaguchi with no change at Takasaki.</b> JR East's own express timetable for 1 Oct–30 Nov 2026 lists <b>長野原草津口</b> as the end of that line, and the Manza-Kazawaguchi departure board shows <b>only local (普通) trains</b>. Assume you change at Naganohara-Kusatsuguchi and ride a local the last four stops (~19 min). Verify with JR before buying.</li>
+        <li><b>The Survival Guide's onsen-shuttle times</b> (ranch 13:19 / 15:29) differ by a few minutes from the official autumn PDF (13:14 / 15:29) — the guide itself warns those are last year's. <b>Trust the PDF.</b></li>
+        <li><b>Whether the last train (20:14) still reaches Tokyo the same night.</b> We could not confirm a same-night arrival off that departure; the last connection we could verify leaves at 18:59.</li>
+        <li><b>Taxis are not on standby.</b> There is no rank at the ranch, and Burning Japan notes plainly that <b>Uber, GO and DiDi barely work outside major cities and do not work in Tsumagoi</b>. You must telephone, in advance, in Japanese.</li>
+        <li><b>Whether the gate still accepts trash after 18:00 on LNT Day, or at all on DBK Day</b> — not stated anywhere official. Assume no and plan to carry it.</li>
+        <li><b>Luggage limits on the bus.</b> No published policy found. It's a single-door rural service bus with no hold — take it as "what you can hold" until someone tells you otherwise.</li>
+        <li><b>Walking is not an option.</b> It is 8.8&nbsp;km from the bell to the station, which sounds walkable — but the Manza Highway is a cars-only private toll road, and "do not walk outside the shoulder line" is one of Burning Japan's five absolute rules, because an accident there can end the event on the spot. Don't.</li>
+      </ul>
+    </div>
+
+    <div class="phones">
+      <div class="ph"><h3>Seibu Kanko Bus · Karuizawa depot<br>西武観光バス 軽井沢営業所</h3><div class="num">0267-45-5045</div><p>The number for "is the bus running / what time is it today". Route-bus desk, 9:00–17:00 (depot hours on the timetable: 8:30–17:30). Japanese.</p></div>
+      <div class="ph"><h3>Taxi · Asahaku Kanko, Tsumagoi<br>浅白観光自動車 嬬恋営業所</h3><div class="num">0279-97-2424</div><p>The local taxi company, based in Kanbara, minutes from the station. Hourly charter ¥6,980 (4-seat) / ¥8,520 (9-seat). Naganohara branch 0279-82-2288, jumbo taxi up to 8 with a booking.</p></div>
+      <div class="ph"><h3>JR East inquiry centre<br>ＪＲ東日本お問い合わせセンター</h3><div class="num">050-2016-1600</div><p>Train times, fares, seat availability. 8:00–21:00. Must be dialled from the 050 prefix.</p></div>
+      <div class="ph"><h3>JR Bus Kanto · highway bus<br>ジェイアールバス関東</h3><div class="num">0570-048905</div><p>Reservations and inquiries for 上州ゆめぐり号, 10:00–17:00. Seats are reserved — book before you leave the ranch.</p></div>
+      <div class="ph"><h3>Tsumagoi Tourist Information<br>嬬恋村観光案内所</h3><div class="num">0279-97-3721</div><p>One minute from Manza-Kazawaguchi Station, 8:30–17:15. Humans who know the buses, can call you a taxi, and rent bicycles (¥1,000/day). Your best friend if the plan breaks.</p></div>
+      <div class="ph"><h3>Tsumagoi Village office<br>嬬恋村 住民課</h3><div class="num">0279-96-0515</div><p>For anything official. Remember: the village accepts no visitor waste — don't ask them to take your bags.</p></div>
+    </div>
+
+    <p class="body" style="margin-top:2rem"><b>No ride at all?</b> Burning Japan runs its rideshare board on its own Discord — the carpool channel is the community's actual answer to "I have no car," both directions, and it's where last-minute exodus seats appear. Ask early, offer to chip in for tolls and petrol, and <b>tell your driver how many bags you're bringing</b> before they say yes. The toll road alone costs money; a quiet ¥2,000 and a cold drink is the gift economy working properly.</p>
+    <p class="note">Hot springs, while you still can: Manza Onsen is ~15 min by car, Kusatsu ~30 min, roughly ¥800–1,000, and Manza's day-visitor desks stop taking people around 16:00 — so the 10:00–14:00 window is the one. Manza is reported to be relatively tattoo-tolerant. Go clean, leave sorted, catch the 16:53.</p>
+  </div>
+</section>
+
 <!-- ============ HONEST SECTION ============ -->
-<section class="burns">
+<section class="burns" id="honest">
   <div class="wrap">
     <div class="sec-kicker">Radical honesty · 正直に</div>
     <h2>What we could not verify</h2>
@@ -370,6 +596,7 @@
         <li><b>Komoro collection days</b> — they differ by district (区); only your host knows which district you're in.</li>
         <li><b>Whether the BJ gate takes trash from drivers</b> — official text limits it to public-transport attendees. Drivers: assume no.</li>
         <li><b>English-language leaflets</b> — Tsumagoi publishes 8 languages (Vietnamese, Khmer, Lao, Chinese, Myanmar, Indonesian, Nepali, Bengali) but no English; Komoro's lookup tool is Japanese-only.</li>
+        <li><b>Bus and train times change with the season</b>, and one official page contradicts another about the limited express. Those gaps have their own honest box in the <a href="#exodus">exodus chapter</a> — read it before you plan your ride home.</li>
       </ul>
     </div>
     <div class="phones">
@@ -402,6 +629,16 @@
         <a href="https://www.city.komoro.lg.jp/soshikikarasagasu/shiminseikatsubu/seikatsukankyoka/1/1/2/1195.html">bag-fee page</a> ·
         <a href="https://www.gomisaku.jp/0080/">ごみサク item lookup</a></li>
       <li>🔥 Clean Hill Komoro facility: <a href="https://cleanhill-komoro.jp/">cleanhill-komoro.jp</a></li>
+      <li>🚌 <a href="#exodus">Exodus chapter</a> — bus times, fares and the suspended Kusatsu section come from Seibu Kanko Bus's own <b>autumn 2026 timetable (valid from 1 Oct 2026)</b>, the same PDFs Burning Japan links from its Access page:<br>
+        <a href="https://www.seibubus.co.jp/docs/rosen/karuizawa/onsen.pdf">seibubus.co.jp …/karuizawa/onsen.pdf (Manza → Karuizawa)</a> ·
+        <a href="https://www.seibubus.co.jp/docs/rosen/karuizawa/eki.pdf">…/karuizawa/eki.pdf (Karuizawa → Manza)</a> ·
+        <a href="https://www.seibubus.co.jp/rosen/karuizawa/">Karuizawa · Kusatsu area index</a> ·
+        <a href="https://www.burningjapan.org/wiki/%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9_-_Access">burningjapan.org/wiki — Access</a></li>
+      <li>🚃 Trains and highway bus: JR East's Manza-Kazawaguchi departure board and the Kusatsu-direction limited-express timetable for 1 Oct–30 Nov 2026; JR Bus Kanto's own digital timetable &amp; fare table for 上州ゆめぐり号 / 東京ゆめぐり号:<br>
+        <a href="https://timetables.jreast.co.jp/timetable/list1453.html">timetables.jreast.co.jp — 万座・鹿沢口</a> ·
+        <a href="https://www.jreast.co.jp/takasaki/kusatsu-shima_akagi/pdf/jikokuhyo.pdf">jreast.co.jp — 草津・四万 timetable (PDF)</a> ·
+        <a href="http://time.jrbuskanto.co.jp/bk03010.html">time.jrbuskanto.co.jp — ゆめぐり号</a></li>
+      <li>🚖 Taxi rates, tourist office hours and local access notes: <a href="https://www.tsumagoi-kankou.jp/access">tsumagoi-kankou.jp/access</a> (Tsumagoi Village Tourism Association)</li>
     </ul>
     <p class="body" style="margin-top:1.6rem;font-style:italic">Not affiliated with Burning Japan, Tsumagoi Village or Komoro City — we're burners who read the official rules so you don't leave a trace by accident.</p>
   </div>
