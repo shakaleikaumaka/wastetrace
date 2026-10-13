@@ -1,0 +1,39 @@
+# 🔐 Defensive ignore — added 2026-10-13 by the security audit.
+# This is a DEPLOY repo: we copy built pages in and `git add` them. Without this file a
+# credential accidentally dropped in the working tree could be committed and pushed public.
+# Protection is immediate and local — no push required for .gitignore to take effect.
+
+# credentials & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+!*.css.key
+.netrc
+.npmrc
+.git-credentials
+*credential*
+*-token
+*.token
+.tg-*
+.x-keys*
+.desk-key
+.app-pass
+vault/
+secrets/
+.secrets/
+
+# browser / session state (live logged-in cookies)
+*-profile/
+.google-profile*/
+.chrome-profile*/
+streamyard-profile/
+Cookies
+Login Data
+
+# local noise
+.DS_Store
+node_modules/
+__pycache__/
+*.log
