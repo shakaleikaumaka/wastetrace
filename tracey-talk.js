@@ -137,21 +137,53 @@
       .then(function (d) { (d.messages || []).forEach(render); caughtUp = true; greet(); })
       .catch(function () { caughtUp = true; greet(); });
   }
+  /* wake law 2026-10-20 (Shaka: "i have to refresh the screen in order to see the responses"):
+     a backgrounded tab freezes its in-flight long-poll — on mobile the fetch can hang forever,
+     so the loop parks on that await and replies only appear on reload. Every poll now carries a
+     32s abort timer, and every wake (tab visible / window focus / bfcache restore / network back)
+     aborts the stuck request, syncs the cursor once, and restarts the loop. A 15s heartbeat does
+     the same if nothing has been heard for 45s. */
+  var pollCtl = null, lastBeat = Date.now();
   function poll() {
     if (polling) return; polling = true;
     (function loop() {
       if (!open) { polling = false; return; }
-      fetch(HUB + '/poll?session=' + encodeURIComponent(sess) + '&after=' + after + '&wait=25')
+      var ctl = null, kill = 0;
+      try { ctl = new AbortController(); pollCtl = ctl; kill = setTimeout(function () { try { ctl.abort(); } catch (e) {} }, 32000); } catch (e) { ctl = null; }
+      fetch(HUB + '/poll?session=' + encodeURIComponent(sess) + '&after=' + after + '&wait=25', ctl ? { signal: ctl.signal } : undefined)
         .then(function (r) { return r.json(); })
         .then(function (d) {
+          if (kill) clearTimeout(kill);
+          lastBeat = Date.now();
           (d.messages || []).forEach(render);
           typing.className = 'ot-typing' + (d.typing ? ' on' : '');
           if (d.typing) scroll();
           loop();
         })
-        .catch(function () { setTimeout(loop, 4000); });
+        .catch(function () { if (kill) clearTimeout(kill); setTimeout(loop, 2000); });
     })();
   }
+  function sync() {
+    // one non-blocking poll from the live cursor — render dedupes on `seen`
+    return fetch(HUB + '/poll?session=' + encodeURIComponent(sess) + '&after=' + after, { cache: 'no-store' })
+      .then(function (r) { return r.json(); })
+      .then(function (d) {
+        lastBeat = Date.now();
+        (d.messages || []).forEach(render);
+        typing.className = 'ot-typing' + (d.typing ? ' on' : '');
+      })
+      .catch(function () {});
+  }
+  function kick() {
+    if (!open) return;
+    try { pollCtl && pollCtl.abort(); } catch (e) {}
+    sync().then(function () { if (!polling) poll(); });
+  }
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) kick(); });
+  window.addEventListener('focus', kick);
+  window.addEventListener('online', kick);
+  window.addEventListener('pageshow', kick);
+  setInterval(function () { if (open && Date.now() - lastBeat > 45000) kick(); }, 15000);
 
   function openPanel() {
     open = true; panel.hidden = false; fab.style.display = 'none';
