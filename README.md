@@ -20,9 +20,14 @@ kitchen (2026). Gifted — never sold.
 - The wider agent family: https://myagentohana.com
 
 ## License
-CC0 — public domain. It's a gift. Take it, fork it, feed people with it.
 
-*As ʻohana, we never leave a trace.* 🏜️
+Code: GPL-3.0 (see LICENSE). Songs, lyrics, chords, words, art, links and pages: CC BY-SA 4.0 (see LICENSE-CONTENT). Credit: Shaka Lei Kaumaka and the ʻohana. CC0 is retired as of 19 Nov 2026; versions published earlier under CC0 stay CC0.
+
+Earlier license note (before 19 Nov 2026; any third-party rights or carve-outs in it still apply):
+
+> CC0 — public domain. It's a gift. Take it, fork it, feed people with it.
+>
+> *As ʻohana, we never leave a trace.* 🏜️
 
 ## License
 
