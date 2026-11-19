@@ -14,4 +14,4 @@ a bell rings, reads `/poll`, and answers with `/agent/reply`. Yours could be a h
 a laptop with `curl`. That's the point — the loop works without our infrastructure.
 
 Fork it for your camp: rename the worker, deploy, point the widget's `HUB` constant at
-your URL, and your camp has a kitchen desk. Gift economy: this is CC0 — no permission needed.
+your URL, and your camp has a kitchen desk. Gift economy: this is CC BY-SA 4.0 — no permission needed.
