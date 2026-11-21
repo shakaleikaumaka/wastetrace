@@ -144,23 +144,34 @@
      aborts the stuck request, syncs the cursor once, and restarts the loop. A 15s heartbeat does
      the same if nothing has been heard for 45s. */
   var pollCtl = null, lastBeat = Date.now();
+  var gen = 0, backoff = 300, fast = false, awaiting = 0;
+  /* 🔁 generation law 2026-11-22 (Shaka: "had to refresh to see the response… faster, more creative and loving"): the loop used to latch on one
+     `polling` boolean — a backgrounded phone can leave the in-flight fetch unsettled even after abort(), and the loop then slept
+     until a reload. Every wake now starts a NEW generation at once (the old fetch is abandoned, its late result discarded), the
+     first poll after a wake is a wait=0 reconcile, errors back off 300 ms → 8 s. Living wait: the typing dots stay on while your
+     line waits (hub `pending`, or our own send until a real reply renders). */
   function poll() {
-    if (polling) return; polling = true;
+    var my = ++gen;
+    try { pollCtl && pollCtl.abort(); } catch (e) {}
     (function loop() {
-      if (!open) { polling = false; return; }
+      if (!open || my !== gen) return;
       var ctl = null, kill = 0;
       try { ctl = new AbortController(); pollCtl = ctl; kill = setTimeout(function () { try { ctl.abort(); } catch (e) {} }, 32000); } catch (e) { ctl = null; }
-      fetch(HUB + '/poll?session=' + encodeURIComponent(sess) + '&after=' + after + '&wait=25', ctl ? { signal: ctl.signal } : undefined)
-        .then(function (r) { return r.json(); })
+      var w = fast ? 0 : 25; fast = false;
+      fetch(HUB + '/poll?session=' + encodeURIComponent(sess) + '&after=' + after + '&wait=' + w, ctl ? { signal: ctl.signal, cache: 'no-store' } : { cache: 'no-store' })
+        .then(function (r) { if (r.status >= 500) throw new Error('hub ' + r.status); return r.json(); })
         .then(function (d) {
           if (kill) clearTimeout(kill);
-          lastBeat = Date.now();
-          (d.messages || []).forEach(render);
-          typing.className = 'ot-typing' + (d.typing ? ' on' : '');
-          if (d.typing) scroll();
+          if (my !== gen) return;
+          backoff = 300; lastBeat = Date.now();
+          (d.messages || []).forEach(function (m) { render(m); if (m.role !== 'visitor' && m.role !== 'system' && !m.holdNote && !m.sleepNote && !m.throttleNote) awaiting = 0; });
+          if (typeof d.pending === 'number' && !d.pending) awaiting = 0;
+          var on = !!(d.typing || d.pending || awaiting);
+          typing.className = 'ot-typing' + (on ? ' on' : '');
+          if (on) scroll();
           loop();
         })
-        .catch(function () { if (kill) clearTimeout(kill); setTimeout(loop, 2000); });
+        .catch(function (err) { if (kill) clearTimeout(kill); if (my !== gen) return; backoff = Math.min(backoff * 2, 8000); setTimeout(loop, backoff); });
     })();
   }
   function sync() {
@@ -176,8 +187,9 @@
   }
   function kick() {
     if (!open) return;
+    fast = true; backoff = 300;
     try { pollCtl && pollCtl.abort(); } catch (e) {}
-    sync().then(function () { if (!polling) poll(); });
+    poll();
   }
   document.addEventListener('visibilitychange', function () { if (!document.hidden) kick(); });
   window.addEventListener('focus', kick);
@@ -199,6 +211,7 @@
     e.preventDefault();
     var t = input.value.trim();
     if (!t) return;
+    awaiting = Date.now(); typing.className = 'ot-typing on';
     input.value = '';
     add('visitor', t);
     fetch(HUB + '/send', {
